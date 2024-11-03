@@ -1,0 +1,24 @@
+backend:
+    functions:
+        - entry: index.js
+          handler: ""
+          name: serverless
+          path: ./
+    language:
+        name: js
+    path: server
+    scripts:
+        deploy:
+            - npm install
+        local:
+            - npm install
+frontend:
+    path: client
+    publish: dist
+    scripts:
+        build: npm run build
+        deploy: npm install
+    subdomain: blush-chubby-gopher
+name: blush-chubby-gopher
+region: us-east-1
+yamlVersion: 2
